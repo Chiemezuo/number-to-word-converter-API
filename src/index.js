@@ -8,6 +8,8 @@ app.use(express.json())
 
 app.get('/', (req, res) => {
 
+    res.set('Access-Control-Allow-Origin', '*');
+
     const number = req.query.number
     try {
         const output = convert(number)
